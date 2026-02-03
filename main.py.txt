@@ -1,0 +1,10 @@
+from cloudlink import cloudlink
+
+if __name__ == "__main__":
+    cl = cloudlink()
+    server = cl.server(logs=True)
+    
+    # 1. 'ip' is the correct name for the CloudLink library.
+    # 2. '0.0.0.0' is mandatory for Zeabur.
+    # 3. Port 8080 is the standard for Zeabur Python apps.
+    server.run(ip="0.0.0.0", port=8080)
